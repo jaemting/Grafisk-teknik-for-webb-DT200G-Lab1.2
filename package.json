@@ -1,0 +1,12 @@
+{
+  "name": "lab-1-2-bildredigering",
+  "version": "0.1.0",
+  "description": "Laboration 1.2 - Bildredigering (minimal scaffold)",
+  "scripts": {
+    "start": "lite-server --port 3000",
+    "serve": "npm run start"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
