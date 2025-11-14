@@ -12,42 +12,63 @@ body {
   text-transform: lowercase;
   font-size: 1em;
   line-height: 1.4;
-  background-color: blue;
+  background-color: rgb(0, 0, 255);
   color: black;
 
 }
 main{
   padding: 1em;
 }
+.container{
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .main-header{
-  color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.6);
-  background-image: url("../img/hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0.4)), url("../img/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 30vh;
 }
 
+
+.main-header div{
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
 
 /*här definierar jag mina menyer*/
 .main-header nav ul{
   margin: 0;
   padding: 0;
   list-style: none;
+  
+  
 }
 .main-header nav li{
-display: inline-block;
-text-shadow: none;
-margin-right: -5px;
+display:flex;
+float: inline-end;
+margin-left: 10px;
+
+
+
 }
 
 
-.main-header nav li a {
+.main-header nav li a, .main-header nav li a:visited {
   display: block;
   color: black;
+  text-emphasis: strong;
   height: 50px;
   padding: 0 1em 0 1em;
   line-height: 50px;
   text-decoration: none;
   background-color: rgba(165, 42, 42,0.7);
   transition: background-color 0.3s;
+  margin-top: 20vh;
+  
   
 }
 .main-header li.current-item a, .main-header nav li a:hover {
@@ -64,200 +85,6 @@ main {
   margin: 0;
   border: 0;
 }
-.subheader {
-  font-family: "Arvo", sans-serif;
-  text-transform: lowercase;
-  font-size: 30px;
-  line-height: 1.4;
-  color: black;
-  margin: 0px;
-  margin: 5px;
-  padding: 40px;
-  text-align: left;
-}
-/*för att kunna förskuta innehållet skapar jag en placeholder, och här beslutar jag hur det ska sitta ihop. detta är för bloggen*/
-.divright {
-  margin: 0;
-}
-.article {
-  margin: 0px;
-  margin-top: 5px;
-  padding: 10px;
-  border: 0;
-  background-color: lightgray;
-}
-.article a:link {
-  text-decoration: none;
-  color: black;
+@media (max-width: 600px){
   
 }
-
-
-.article a:visited {
-  text-decoration: none;
-  color: black;
-}
-.article a:hover{
-   font-style: oblique ;
-}
-
-
-.article p {
-  text-align: right;
-}
-.about {
-  display: none;
-  margin: 0;
-}
-.blogintro {
-  display: none;
-}
-
-.concertstext {
-  display: none;
-}
-.blog {
-  margin: 0px;
-  margin-bottom: 5px;
-  padding: 10px;
-  padding-bottom: 20px;
-  background-color: lightgray;
-  font-size: 1em;
-  text-align: left;
-}
-
-.blog img {
-  width: 40%;
-  height: auto;
-  border-radius: 5px;
-  float: left;
-  margin: 0 10px 10px 0;
-}
-.blog a {
-  text-decoration: none;
-  color: black;
-}
-
-.blog a:visited {
-  text-decoration: none;
-  color: black;
-}
-
-/*här börjar jag koda specifikt för shoppen*/
-.divshop {
-  display: grid;
-  border: none;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5px;
-  width: auto;
-  padding: 0;
-  
-}
-.shop {
-  display: grid;
-  border: 1px solid darkgray;
-  border-radius: 5px;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 0px;
-  width: auto;
-  padding: 0%;
-  background-color: lightgray;
-}
-.shop img {
-  grid-column: 1 / span 3;
-  border-radius: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.shop a {
-  text-decoration: underline;
-  color: black;
-  grid-column: 1 / span 3;
-  padding-right: 5px;
-  font-size: 1em;
-  text-align: center;
-}
-
-.shop a:visited {
-  text-decoration: underline;
-  color: black;
-}
-.shop h2 {
-  padding-bottom: 10px;
-}
-.price {
-  text-align: right;
-  color: rgb(85, 84, 84);
-  padding-right: 5px;
-  font-size: 1.2em;
-}
-
-.item {
-  font-family: "Arvo", sans-serif;
-  text-align: left;
-  font-size: 1.2em;
-  padding-left: 5px;
-  
-}
-/*här börjar jag koda specifikt för konsertsidan */
-.concert {
-  display: grid;
-  grid-template-columns: auto auto;
-  background-color: lightgray;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-
-.concert-location {
-  font-family: "Arvo", sans-serif;
-  font-size: 1.5em;
-  text-align: left;
-}
-.concert-date {
-  
-  font-size: 1em;
-  text-align: right;
-  
-}
-.concert-venue {
-  grid-column: 1 / span 2;
-  font-family: "Arvo", sans-serif;
-  font-size: 2em;
-  padding: 20px;
-}
-.concert-phone {
-  font-size: 1em;
-  text-decoration: none;
-  color: black;
-}
-.concert-website {
-  text-align: right;
-  font-size: 1em;
-}
-
-.concert-website a {
-  text-decoration: underline;
-  color: black;
-}
-.concert-list {
-  margin: 0;
-}
-
-.concert-website a:visited {
-  text-decoration: none;
-  color: black;
-}
-footer {
-  background-color: lightgray;
-  margin-top: 5px;
-  text-align: center;
-  padding: 10px;
-    
-  }  
- 
-
-/*här börjar jag koda specifikt för desktop*/
