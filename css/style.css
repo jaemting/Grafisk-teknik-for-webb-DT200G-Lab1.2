@@ -1,7 +1,6 @@
 /*här sätter jag själva grund boxen*/
 * {
   box-sizing: border-box;
-  border-radius: 5px;
   margin: 0px;
   padding: 0;
   text-align: center;
@@ -13,48 +12,46 @@ body {
   text-transform: lowercase;
   font-size: 1em;
   line-height: 1.4;
-  background-color: white;
+  background-color: blue;
   color: black;
 
 }
-
-
+main{
+  padding: 1em;
+}
+.main-header{
+  color: white;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  background-image: url("../img/hero.jpg");
+}
 
 
 /*här definierar jag mina menyer*/
-nav {
-  margin: 5px;
-}
-ul {
-  list-style-type: none;
+.main-header nav ul{
   margin: 0;
-  margin-top: 5px;
   padding: 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  width: auto;
+  list-style: none;
 }
-ul li {
-  float: left;
-  margin: 0;
-  border: 0px;
-  background-color: lightgray;
-  text-align: center;
-  width: 25%;
-  font-family: "Arvo", sans-serif;
+.main-header nav li{
+display: inline-block;
+text-shadow: none;
+margin-right: -5px;
 }
 
-ul li a {
+
+.main-header nav li a {
   display: block;
   color: black;
-  text-align: center;
-  padding: 14px 14px;
+  height: 50px;
+  padding: 0 1em 0 1em;
+  line-height: 50px;
   text-decoration: none;
-  margin: 0px;
+  background-color: rgba(165, 42, 42,0.7);
+  transition: background-color 0.3s;
+  
 }
-ul li a:visited {
+.main-header li.current-item a, .main-header nav li a:hover {
+background-color: rgba(165, 42, 42, 1);
   color: black;
 }
 ul li a:active {
@@ -64,7 +61,7 @@ ul li a:active {
 
 /*nu börjar utseendet på huvidsidan avklaras*/
 main {
-  margin: 5;
+  margin: 0;
   border: 0;
 }
 .subheader {
@@ -264,243 +261,3 @@ footer {
  
 
 /*här börjar jag koda specifikt för desktop*/
-
-@media (min-width: 600px) {
-  body {
- 
-    background-color: white;
-  }
-  header {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1000px;
-  }
-  header h1 {
-    font-size: 70px;
-    
-
-  }
-    .logo {
-    padding-top: 100px;
-    padding-bottom: 90px;
-
-    }
-  main {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1000px;
-  }
-  /*sid foten får ett nytt utseende*/
-  footer {
-    margin: 5px auto;
-    padding: 10px;
-    max-width: 1000px;
-  }
-
-    /*navigationen anpassas den med*/
-  nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-  ul {
-    width: 80%;
-    justify-content: flex-end;
-    gap: 5px;
-  }
-  ul li {
-    float: right;
-    display: block;
-    text-align: center;
-    width: 25%;
-    font-family: "Arvo", sans-serif;
-    font-size: larger;
-  }
-
-  ul li a:hover:not(.highligt) {
-    background-color: darkgray;
-  }
-  ul li a.highligt {
-    background-color: rgb(146, 158, 158);
-  }
-  ul li a:active {
-    background-color: rgb(146, 158, 158);
-  }
-  .subheader {
-    display: none;
-  }
-    /*startsidan får här grid system istället för flexbox. */
-  .startmain {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    margin: 0 auto;
-    margin-top: 5px;
-    padding: 0;
-    max-width: 1000px;
-  }
-
-  .article {
-    display: block;
-    padding: 20px;
-    margin: 0px;
-    padding-top: 50px;
-    background-color: lightgray;
-    margin: 0;
-  }
-
-
-
-  .article p {
-    padding-top: 40px;
-    margin: 0;
-  }
-  h2 {
-    font-family: "Arvo", sans-serif;
-    text-transform: lowercase;
-    font-size: 30px;
-    padding: 30px;
-    margin: 0px;
-  }
-  .about {
-    display: block;
-    background-color: rgb(235, 235, 235);
-    padding: 20px;
-    padding-top: 50px;
-    margin: 0px;
-  }
-  .about p {
-    text-align: right;
-    padding-top: 25px;
-  }
-/*blogg sidan anpassas den med. här får vå två förskutningar*/
-
-  .divright {
-    margin: 0 auto;
-    margin-top: 5px;
-    padding: 0;
-    max-width: 1000px;
-  }
-
-  .blogpage {
-    margin: 0;
-    margin-right: 0px;
-    margin-left: auto;
-    padding: 0 5px;
-    max-width: 85%;
-    background-color: lightgray;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
-    section {
-    margin: 0;
-    }
-  /*ett tidigar dolt textblock plockas fram*/
-  .blogintro {
-    display: block;
-    font-family: "Arvo", sans-serif;
-    text-transform: lowercase;
-    font-size: 30px;
-    padding: 50px;
-  }
-  .blog {
-    width: 70%;
-
-    margin-right: 0;
-    margin-left: auto;
-    background-color: white;
-  }
-/*shoppan anpassas även den med, den får tre kolumner stället för två. */
-  .divshop {
-    display: grid;
-    border: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    width: auto;
-    padding: 0;
-    margin: 0;
-    margin-top: 5px;
-  }
-  .shop {
-    display: grid;
-    border: none;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0px;
-    width: auto;
-    padding: 0%;
-    background-color: lightgray;
-  }
-  .shop img {
-    grid-column: 1 / span 3;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-
-  .shop a {
-    text-decoration: underline;
-    color: black;
-    grid-column: 1 / span 3;
-    padding: 5px;
-    padding-right: 10px;
-    font-size: 1em;
-    text-align: right;
-  }
-
-  .shop a:visited {
-    text-decoration: underline;
-    color: black;
-  }
-
-  .price {
-    text-align: right;
-    font-family: "Arvo", sans-serif;
-    font-size: 1.6em;
-    color: black;
-    padding: 5px;
-    padding-right: 10px;
-    margin: 0;
-  }
-
-  .item {
-    font-family: "Arvo", sans-serif;
-    text-align: left;
-    font-size: 1.6em;
-    padding: 5px;
-    padding-left: 10px;
-    margin: 0;
-  }
-
-  /*konsertsidan den får ochså den anpassningar samt att dolda textfelt plockas fram*/
-
-  .concertsmain {
-    margin: 5px auto;
-    margin-bottom: 0px;
-    padding: 0;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: 30% 1fr;
-  }
-  .concertstext {
-    display: block;
-    font-family: "Arvo", sans-serif;
-    text-transform: lowercase;
-    font-size: 40px;
-    padding: 30px;
-    padding-top: 70px;
-    margin: 0;
-  }
-  .concert-list {
-    margin: 0;
-    padding: 0;
-  }
-  .concert {
-    margin: 0;
-    margin-bottom: 5px;
-  }
-  .concert:last-child{
-    margin-bottom: 0;
-  }
-}
