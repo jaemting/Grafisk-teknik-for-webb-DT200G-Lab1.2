@@ -95,7 +95,7 @@ main {
 }
 .index-one{
   background-color: aqua;
-  margin-left: 20vh;
+  margin-left: 20vw;
   margin-top: 10vh;
   padding: 20px;
   border-bottom-left-radius: 50px;
@@ -111,8 +111,34 @@ main {
   padding: 10px;
   border-bottom-left-radius: 50px;
 }
- <section class="index-one">
- <div id="photos-main">
+
 @media (max-width: 600px){
+  body {
+    background-color: chartreuse;
+  }
   
+.main-header nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+.main-header nav li{
+display:inline-block;
+
+}
+
+
+.main-header nav li a, .main-header nav li a:visited {
+  display: block;
+  color: black;
+  text-emphasis: strong;
+  height: 50px;
+  padding: 0 1em 0 1em;
+  text-decoration: none;
+  background-color: rgba(165, 42, 42,0.7);
+  transition: background-color 0.3s;
+
+
+}
 }
