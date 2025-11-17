@@ -33,7 +33,7 @@ main{
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 30vh;
+  height: 250px;
 }
 
 .logga {
@@ -177,7 +177,7 @@ margin-left: 10px;
   }
   
   .main-header {
-    height: 35vh;
+    height: 300px;
   }
 .main-header nav ul{
   margin: 0;
@@ -211,3 +211,16 @@ display:inline-block;
 
   }
 }
+
+@media (max-width: 450px){
+  .main-header {
+    height: 270px;
+  }
+  body {
+  font-family: "Rubik",sans-serif;
+  text-transform: lowercase;
+  font-size: 1em;
+  line-height: 1.4;
+  background-color: rgb(149, 178, 211);
+  color: black;
+}}
