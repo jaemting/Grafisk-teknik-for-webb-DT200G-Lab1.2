@@ -10,9 +10,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: lowercase;
-  font-size: 1em;
+  font-size: 1.4em;
   line-height: 1.4;
-  background-color: rgb(0, 0, 255);
+  background-color: rgb(104, 205, 212);
   color: black;
   
 
@@ -22,12 +22,12 @@ main{
   display: block;
 }
 .container{
-  max-width: 1080px;
+  max-width: 990px;
   margin-left: auto;
   margin-right: auto;
 }
 .main-header{
-  background-image: linear-gradient(rgba(0, 0, 255, 0.1), rgba(0, 0, 255, 0.4)), url("../img/hero.jpg");
+  background-image: linear-gradient(rgba(104, 205, 212, 0.1), rgba(104, 205, 212, 0.4)), url("../img/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -43,7 +43,7 @@ main{
 
 .main-header div{
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
   clear: both;
 }
 
@@ -52,37 +52,37 @@ main{
   margin: 0;
   padding: 0;
   list-style: none;
-  
-  
+  text-shadow: 0 0 2px rgba(251, 253, 253, 0.7);  
 }
 .main-header nav li{
 display:flex;
 float: right;
 margin-left: 10px;
+font-weight: bold;
 }
 
 
 .main-header nav li a, .main-header nav li a:visited {
   display: block;
   color: black;
-  text-emphasis: strong;
+  
   height: 50px;
   padding: 0 1em 0 1em;
   line-height: 50px;
   text-decoration: none;
-  background-color: rgba(165, 42, 42,0.7);
+  background-color: rgba(51, 133, 139,0.7);
   transition: background-color 0.3s;
-  margin-top: 21vh;
+  margin-top: 1vh;
   
   
 }
 .main-header li.current-item a, .main-header li.current-item a:visited, .main-header nav li a:hover {
-background-color: rgba(165, 42, 42, 1);
+background-color: rgba(51, 133, 139, 1);
   color: black;
 }
 ul li a:active {
   color: black;
-  background-color: darkgrey;
+  background-color: rgba(51, 133, 139, 1);
 }
 
 /*nu börjar utseendet på huvidsidan avklaras*/
@@ -95,12 +95,9 @@ main {
     display: block;  
     block-size: inherit;
     margin-bottom: 20px; 
-    
-
-
-}
+    }
 .index-one{
-  background-color: aqua;
+  background-color: rgb(51, 133, 139);
   margin-left: 20vw;
   margin-top: 10vh;
   padding: 20px;
@@ -108,30 +105,49 @@ main {
 }
 
 #photos-main{
-  background-color: beige;
+  display: flex;
+  align-items: flex-start; 
+ 
+  
+}
+
+#photos-main img {
+  width: 100%;
+  max-width: 330px;
+  height: auto;
 }
 
 .photosection {
   margin-top: 80px;
   background-color: brown;
-  padding: 10px;
+  padding: 20px;
   border-bottom-left-radius: 50px;
+  padding-left: 30px;
+ 
+}
+.photosection ul {
+margin-left: 10px;
+
+
 }
 
+.photosection p {
+  margin: 20px;
+
+
+
+
+}
+.photosection li{
+  text-align: left;
+  padding-left: 5px;
+
+}
 .photosection img{
-  max-width: 30%;
-  height: auto;
-}
-#photos-main{
-    display: flex;
-  align-items: flex-start; 
-  gap: 10px; 
+  max-height: 300px;
+  width: auto;
 }
 
-#photos-main img {
-  max-width: 32.6%;
-  height: auto;
-}
 
 @media (max-width: 600px){
   body {
@@ -156,7 +172,7 @@ display:inline-block;
   height: 50px;
   padding: 0 1em 0 1em;
   text-decoration: none;
-  background-color: rgba(165, 42, 42,0.7);
+  background-color: rgba(51, 133, 139,0.7);
   transition: background-color 0.3s;
 
 
