@@ -67,12 +67,11 @@ font-weight: bold;
 .main-header nav li a, .main-header nav li a:visited {
   display: block;
   color: black;
-  
   height: 50px;
   padding: 0 1em 0 1em;
   line-height: 50px;
   text-decoration: none;
-  background-color: rgba(107, 149, 226,0.7);
+  background-color: rgba(107, 149, 226,0.4);
   transition: background-color 0.3s;
   margin-top: 1vh;
   
@@ -169,14 +168,17 @@ margin-left: 10px;
   margin-left: 20vw;
   margin-top: 10vh;
   padding: 20px;
-  margin-bottom: 900px;
+
   border-bottom-left-radius: 50px;
 }
-@media (max-width: 600px){
+@media (max-width: 750px){
   body {
-    background-color: chartreuse;
+    background-color: rgb(149, 178, 211);
   }
   
+  .main-header {
+    height: 35vh;
+  }
 .main-header nav ul{
   margin: 0;
   padding: 0;
@@ -191,13 +193,17 @@ display:inline-block;
 .main-header nav li a, .main-header nav li a:visited {
   display: block;
   color: black;
-  text-emphasis: strong;
   height: 50px;
   padding: 0 1em 0 1em;
-  text-decoration: none;
-  background-color: rgba(107, 149, 226,0.7);
   transition: background-color 0.3s;
 
-
 }
+.index-one, .photosection {
+  background-color: rgb(149, 178, 211);
+  margin-left: 0;
+  margin-top: 1vh;
+  padding: 20px;
+
+
+  }
 }
